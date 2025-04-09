@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Site Harmonioso com Tema</title>
+  <style>
+    :root {
+      --bg-dark: #264653;
+      --primary: #2a9d8f;
+      --accent: #e9c46a;
+      --button: #f4a261;
+      --link: #e76f51;
+      --text-dark: #ffffff;
+      --text-light: #000000;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-dark);
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    header, footer {
+      background-color: var(--primary);
+      padding: 20px;
+      text-align: center;
+    }
+
+    main {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    section, aside {
+      flex: 1 1 300px;
+      padding: 20px;
+      border-radius: 10px;
+      transition: background-color 0.3s;
+    }
+
+    section {
+      background-color: var(--accent);
+      color: var(--text-light);
+    }
+
+    aside {
+      background-color: var(--button);
+      color: var(--text-light);
+    }
+
+    a {
+      color: var(--link);
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .botao, .toggle-tema {
+      display: inline-block;
+      background-color: var(--link);
+      color: #fff;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background-color 0.3s;
+    }
+
+    .botao:hover, .toggle-tema:hover {
+      background-color: #d45a3f;
+    }
+
+    footer p {
+      margin: 0;
+    }
+
+    .toggle-tema {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 10;
+    }
+
+    /* Tema Claro */
+    .claro {
+      --bg-dark: #f5f5f5;
+      --text-dark: #222;
+      --primary: #8ecae6;
+      --accent: #ffb703;
+      --button: #fb8500;
+      --link: #219ebc;
+    }
+  </style>
+</head>
+<body>
+  <button class="toggle-tema" onclick="alternarTema()">🌙 Mudar Tema</button>
+
+  <header>
+    <h1>Meu Site com cores harmoniosas</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Bem-vindo!</h2>
+      <p>Este é um exemplo de site com uma paleta de cores harmoniosa, responsivo e com tema alternável.</p>
+      <a href="https://www.instagram.com/infinity.school/" class="botao" >Explorar</a>
+    </section>
+
+    <aside>
+      <h3>Menu</h3>
+      <ul>
+        <li><a href="https://www.youtube.com/@victorhq_of">Início</a></li>
+        <li><a href="https://github.com/VictorHq14">Sobre</a></li>
+        <li><a href="https://www.instagram.com/infinity.school/">Contato</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 - Desenvolvido com ajuda de IA (Chatgpt)</p>
+  </footer>
+
+  <script>
+    function alternarTema() {
+      document.body.classList.toggle("claro");
+    }
+  </script>
+</body>
+</html>
